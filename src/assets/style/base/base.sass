@@ -1,7 +1,8 @@
 
 body
    overflow-x: hidden
-   background: $darkBlue
+   background: $dark
+   
 
 .title-bg-center
    font-weight: 900
@@ -14,3 +15,31 @@ body
    margin: 0 auto
    span
       display: block   
+
+.blur
+   display: inline-block
+   width: 1083px
+   height: 1083px
+   position: absolute
+   background: $blue
+   border-radius: 50%
+   filter: blur(380px)
+   z-index: -1
+   overflow: hidden
+   &_first
+      top: -900px
+
+   &_second
+      top: 512px
+      right: -881px
+   &_third
+      top: 1405px
+      left: -881px
+   &_fourth
+      top: 2453px
+      right: -881px
+   &_fifth
+      top: 4316px
+      left: 50%
+      transform: translateX(-50%)
+

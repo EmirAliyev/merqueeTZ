@@ -29,6 +29,8 @@ import slider from "../components/parts/home/slider.vue";
 import marquee from "../components/parts/home/marquee.vue";
 import createAccount from "../components/parts/home/createAccount.vue";
 
+let blurClasses = ['first','second','third','fourth','fifth']
+
 let animationLogos = [
   { id: 1, name: new URL("@/assets/img/ic__company_5.svg", import.meta.url).href },
   { id: 2, name: new URL("@/assets/img/ic__fyta.svg", import.meta.url).href },
