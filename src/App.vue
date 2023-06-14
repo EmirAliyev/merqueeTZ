@@ -1,16 +1,24 @@
 <template>
   <Header />
-    <div class="blur blur_first"></div>
-  <div class="blur blur_second"></div>
-  <div class="blur blur_third"></div>
-  <div class="blur blur_fourth"></div>
-  <div class="blur blur_fifth"></div>
+  <div
+    v-for="blur in blurs"
+    :key="blur.id"
+    :class="`blur blur_${blur.newClass}`"
+  ></div>
   <Home />
 </template>
 
 <script setup>
 import Header from "./components/Header.vue";
 import Home from "./views/Home.vue";
+
+let blurs = [
+  { id: 1, newClass: "first" },
+  { id: 2, newClass: "second" },
+  { id: 1, newClass: "third" },
+  { id: 1, newClass: "fourth" },
+  { id: 1, newClass: "fifth" },
+];
 </script>
 
 <style>

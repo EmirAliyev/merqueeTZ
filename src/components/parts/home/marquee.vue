@@ -2,10 +2,10 @@
   <div
     :class="`icons__animation-items-show icons__animation-items-show-${newClass} `"
   >
-    <div v-for="logo in logos" class="icons__animation-item">
+    <div v-for="logo in logos" :key="logo.id" class="icons__animation-item">
       <img :src="logo.name" />
     </div>
-    <div v-for="logo in logos" class="icons__animation-item">
+    <div v-for="logo in logos" :key="logo.id" class="icons__animation-item">
       <img :src="logo.name" />
     </div>
     <div class="icons__animation-item">
