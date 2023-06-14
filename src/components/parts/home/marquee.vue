@@ -9,7 +9,7 @@
       <img :src="logo.name" />
     </div>
     <div class="icons__animation-item">
-      <img src="../assets/img/ic__company_5.svg" />
+      <img src="@/assets/img/ic__company_5.svg" />
     </div>
   </div>
 </template>
