@@ -1,0 +1,118 @@
+.home
+   padding: 185px 0px
+   &__title
+      &-first
+         margin-bottom: 333px !important
+      &-second
+         margin-bottom: 269px  !important
+      &-third
+         margin-bottom: 67px !important
+
+   
+
+.carousel
+   max-width: 975px
+   margin: 0 auto
+   margin-bottom: 267px
+   &__viewport
+      height: 100%
+      display: flex
+      width: 100%
+      gap: 16px
+   &__slide
+      display: flex
+      flex-direction: column
+      width: 309px !important
+   &__track
+      gap: 16px
+   &__item  
+      &-first,&-second
+         width: 309px 
+         height: 256px 
+         background: linear-gradient(304.29deg, rgba(51, 123, 190, 0.2) 0%, rgba(51, 123, 190, 0) 100%), rgba(255, 255, 255, 0.08)
+         border-radius: 16px
+         margin-bottom: 16px
+         display: flex
+         flex-direction: column
+         align-items: center
+         justify-content: center
+   &__pagination
+      &-button::after
+         width: 12px
+         height: 12px
+         border-radius: 50%
+         background: $darkGrey
+      &-button--active::after
+         background: #0A72D4
+   
+      
+.icons__animation
+   &-container
+      display: flex
+      justify-content: center
+      align-items: center
+      flex-direction: column
+      max-width: 1920px
+      width: 100%
+      height: max-content
+      overflow: hidden
+      margin-bottom: 271px
+   &-item
+      min-width: 310px
+      height: 224px
+      border-radius: 16px
+      background: linear-gradient(304.29deg, rgba(51, 123, 190, 0.2) 0%, rgba(51, 123, 190, 0) 100%), rgba(255, 255, 255, 0.08)
+      display: flex
+      align-items: center
+      justify-content: center
+   &-items-show, &-items-show-right
+      display: flex
+      max-width: 1920px
+      will-change: transform
+      white-space: nowrap
+      margin-bottom: 16px
+      animation: marquee 12s linear infinite
+      gap: 16px
+      margin-bottom: 16px
+   &-items-show-right
+      animation: marquee-reverse 10s linear infinite
+
+.create__account
+   height: 502px
+   width: 512px
+   margin: 0 auto
+   font-family: Inter
+   &-username,&-password
+      display: inline-block
+      font-weight: 400
+      font-size: 16px
+      color: white
+      margin-bottom: 14px
+      cursor: pointer
+
+.titleShow
+   animation: titleShowStart 1s ease
+
+.titleHide
+   opacity: 0
+
+@keyframes marquee 
+   0%
+      transform: translateX(0)
+   100%
+      transform: translateX(-1956px)
+
+@keyframes marquee-reverse
+   0%
+      transform: translateX(-1956px)
+   100%
+      transform: translateX(0px)
+
+
+@keyframes titleShowStart
+   0%
+      opacity: 0
+      transform: translateY(150px)
+   100%
+      opacity: 1
+      transform: translateY(0px)
